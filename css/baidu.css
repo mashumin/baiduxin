@@ -1,0 +1,351 @@
+body,html{
+    width:100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+ul,li{
+    list-style: none;
+}
+/*头*/
+.header{
+    width:100%;
+    height:60px;
+    background: #168BD8;
+    position: fixed;
+    top:0;left:0;
+    z-index: 2;
+}
+.box{
+    height:50px;
+    display: flex;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+.box a{
+
+    width:320px;
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.box .fist{
+    margin-top: 5px;
+}
+.box .last{
+    font-size: 12px;
+    margin-top: 10px;
+}
+.box .fist:nth-of-type(2){
+    margin-left: 50px;
+}
+.box a:nth-of-type(5){
+    margin-left: 50px;
+}
+.box a:nth-of-type(1){
+    background: url(../img/baidu.png) no-repeat 0 0;
+}
+
+
+/*第一屏*/
+
+.fullpage{
+    width:100%;
+    height:100%;
+    transition: all .5s ease;
+}
+.fullpage>div{
+    width:100%;
+    height:621px;
+    position: relative;
+}
+.fullpage>div:nth-child(1){
+    background:#2E92E0  url(../img/bg0.jpg);
+}
+.con{
+    height:100%;
+}
+.lau{
+    width:501px;
+    height:198px;
+    background: url(../img/lau.png) no-repeat center;
+    margin-top: 60px;
+    position: relative;
+    /*float: left;*/
+}
+.fli{
+    width:119px;
+    height:79px;
+    background: url(../img/fli.png) no-repeat;
+    position: absolute;
+    right:0;
+}
+.fom{
+    width: 340px;
+    height:293px;
+    padding: 20px;
+    background:#4EBFFC;
+    border-radius: 10px;
+    position: absolute;
+    right:250px;top: 50px;
+}
+.fom>div{
+    padding-top: 10px;
+    padding-left: 10px;
+    width: 299px;
+    height:40px;
+    margin-bottom: 10px;
+    background: #fff;
+}
+.fom>div:nth-of-type(3){
+    width: 140px;
+    height:38px;
+    float: left;
+}
+.fom img{
+    float: left;
+    margin-left: 10px;
+}
+.fom input{
+    background: none;
+    border: 0;
+    color: #A1A6B7;
+}
+.fom a{
+    float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.fom .but{
+    width:299px;
+    height:40px;
+    line-height: 40px;
+    color: #5C4C28;
+    background:#FFD850;
+    box-shadow:  0 3px 2px 0 rgba(0,0,0,0.2);
+    margin-top: 20px;
+}
+.fom .bots{
+    width: 299px;
+    height:19px;
+    padding: 10px;
+    background:none;
+}
+.bots .xiao{
+    width:15px;
+    height:17px;
+    background: url(../img/icons.png) no-repeat -203px -75px;
+    float: left;
+    margin-top: 10px;
+}
+.bots a{
+    font-size: 12px;
+    float: left;
+}
+.bots a:nth-of-type(2){
+    float: right;
+}
+.bottom{
+    width: 100%;
+    height:196px;
+    background: rgba(11,103,190,0.5);
+    position: absolute;
+    bottom:0px;
+}
+.hill{
+    width:265px;
+    height:175px;
+    background: url(../img/hill.png);
+    position: absolute;
+    top:-50px;
+}
+.hill0{
+    width:63px;
+    height:78px;
+    background: url(../img/hill0.png);
+    position: absolute;
+    top:-15px;
+    right: 330px;
+}
+.hill1{
+    width:260px;
+    height:178px;
+    background: url(../img/hill1.png) no-repeat;
+    position: absolute;
+    top:-50px;
+    right: 50px;
+}
+.ship{
+    width:242px;
+    height:228px;
+    background: url(../img/ship.png);
+    margin-left: 130px;
+    margin-top: 43px;
+}
+.arr{
+    width:30px;
+    height:26px;
+    position: absolute;
+    top: 0;bottom:0;left: 0;
+    right:0;margin: auto;
+    background: url(../img/arr.png);
+}
+/*第二屏*/
+.fullpage>div:nth-child(2){
+    background: url(../img/bg1.jpg);
+}
+.qm{
+    width: 500px;
+    height:126px;
+    float: left;
+    padding-top: 150px;
+}
+.ling{
+    width:66px;
+    height:156px;
+    float: left;
+    margin-right: 50px;
+    background: url(../img/lx.png) no-repeat center;
+}
+.qm h1,.qm p{
+    color: #fff;
+    padding-left:50px;
+    line-height: 2;
+}
+.qm p{
+    font-size: 25px;
+}
+.dra{
+    width:444px;
+    height:497px;
+    float: right;
+    background: url(../img/bra.png) no-repeat bottom;
+}
+
+.zhu{
+    width:1000px;
+    height:100px;
+    position: absolute;
+    bottom: 0;
+    left:0;right: 0;margin: auto;
+}
+.zhu div:nth-of-type(1){
+    width:44px;
+    height:84px;
+    background: #35B568;
+    position: absolute;
+    bottom:0;
+}
+.zhu div:nth-of-type(2){
+      width:88px;
+      height:168px;
+      background: #4AC179;
+    position: absolute;
+    bottom:0;
+    left:205px;
+    z-index: 1;
+}
+.zhu div:nth-of-type(3){
+    width:44px;
+    height:84px;
+    background: #8AE75A;
+    position: absolute;
+    bottom:0;
+    right:250px;
+}
+.zhu div:nth-of-type(4){
+    width:44px;
+    height:84px;
+    background: #4AC179;
+    position: absolute;
+    bottom:0;
+    right:200px;
+}
+.zhu div:nth-of-type(5){
+    width:44px;
+    height:84px;
+    background: #8AE75A;
+    position: absolute;
+    bottom:0;
+    left:290px;
+}
+
+/*第三屏*/
+.fullpage>div:nth-child(3){
+    background: url(../img/bg2.jpg);
+}
+.qqmm{
+    background: url(../img/qm.png) no-repeat;
+}
+.qm1{
+    background: url(../img/all.png) no-repeat bottom;
+    z-index: 1;
+}
+.qm_bot{
+    width: 100%;
+    height:138px;
+    position: absolute;
+    bottom: 0;
+    left:0;
+    background: url(../img/bg-3.png);
+}
+.all{
+    position: relative;
+}
+.all_1{
+    width:88px;
+    height:88px;
+    background: #33BB9A;
+    position: absolute;
+    top:40px;left: 88px;
+}
+/*.all_2{*/
+    /*width:88px;*/
+    /*height:88px;*/
+    /*background: #29A2B8;*/
+    /*position: absolute;*/
+    /*top:128px;left: 0;*/
+/*}*/
+/*第四屏*/
+.fullpage>div:nth-child(4){
+    background: url(../img/bg3.jpg);
+}
+.si{
+    background: url(../img/zhu.png) no-repeat ;
+
+}
+.si1{
+    width: 603px;
+    height:400px;
+    background: url(../img/star.png) no-repeat bottom;
+    margin-top: 170px;
+}
+.prea{
+    height:500px;
+    position: absolute;
+    top:0;
+    background: url(../img/bul.png) no-repeat left;
+}
+.lunbo{
+    width: 20px;
+    height:100px;
+    position: fixed;
+    top:0;
+    bottom:0;
+    right:10px;
+    margin: auto;
+}
+.lunbo div{
+    width: 10px;
+    height:10px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border:1px solid #184E77;
+}
+.active{
+    background: #316489;
+}

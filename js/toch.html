@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="toch.js"></script>
+    <script src="jquery.js"></script>
+</head>
+<style>
+    body,html{
+        width:100%;
+        height:100%;
+    }
+    *{
+        box-sizing: border-box;
+    }
+    .box{
+        width:100%;
+        height:200px;
+        position: absolute;
+        top:0;left: 0;
+        font-size: 30px;
+        color: #fff;
+        text-align: center;
+        /*line-height: 400px;*/
+        overflow: hidden;
+    }
+    .boxs{
+        width:300%;
+        height:100%;
+    }
+     a{
+        float: left;
+         display: block;
+        width: 33.33%;
+        height:100%;
+         border:1px solid red;
+
+    }
+    a:nth-child(1){
+        background: #e9322d;
+    }
+    a:nth-child(2){
+        background: #2d78f4;
+    }
+    a:nth-child(3){
+        background: #E4229A;
+    }
+</style>
+
+<body>
+<div class="box">
+    <div class="boxs">
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+    </div>
+</div>
+</body>
+</html>
+<script>
+    var marginl;var num=0;
+    var width=$(window).width();
+
+    $(".box").mousedown(function(e){
+        e.preventDefault();
+    })
+    $(".box").mousemove(function(e){
+        e.preventDefault();
+    })
+
+    touch.on("body","dragstart",".boxs",function(){
+        $(".boxs").css("transition","none");
+       marginl=parseInt($(".boxs").css("marginLeft"))?parseInt($(".boxs").css("marginLeft")):0;
+    })
+
+    touch.on("body","drag",".boxs",function(e){
+        $(".boxs").css({
+            marginLeft:e.x+marginl,
+        })
+    })
+    touch.on("body","dragend",".boxs",function(e){
+        if(Math.abs(e.x)>100){
+            if(e.direction=="left"){
+                num++;
+                if(num==$(".boxs a").length){
+                    num=$(".boxs a").length-1;
+                }
+            }
+            if(e.direction=="right"){
+                num--;
+                if(num==-1){
+                    num=0;
+                }
+            }
+            $(".boxs").css({
+                marginLeft:-num*width,
+                transition:"marigin 1s ease"
+            })
+        }else{
+            $(".boxs").css({
+                marginLeft:-num*width,
+                transition:"marigin 1s ease"
+            })
+        }
+    })
+
+</script>
