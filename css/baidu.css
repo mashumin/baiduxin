@@ -15,7 +15,10 @@ ul,li{
     background: #168BD8;
     position: fixed;
     top:0;left:0;
-    z-index: 2;
+    z-index: 99;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
 }
 .box{
     height:50px;
@@ -26,28 +29,104 @@ a{
     color: #fff;
 }
 .box a{
-
-    width:320px;
-    height:100%;
+    /*width:320px;*/
+    height:50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.box .fist{
-    margin-top: 5px;
-}
-.box .last{
-    font-size: 12px;
-    margin-top: 10px;
-}
+
 .box .fist:nth-of-type(2){
-    margin-left: 50px;
+    margin-left: 0px;
 }
 .box a:nth-of-type(5){
-    margin-left: 50px;
+    margin-left: 0px;
 }
-.box a:nth-of-type(1){
+.box .index{
     background: url(../img/baidu.png) no-repeat 0 0;
+}
+.max{
+    display: none;
+}
+.min{
+    display: block;
+}
+.bai{
+    width:320px;
+    margin-left: 10px;
+}
+.muen{
+    width:20px;
+    height:40px;
+    float: right;
+    margin-right: 10px;
+}
+.muen .muen-top{
+    width: 100%;
+    height:2px;
+    margin-top: 13px;
+    background: #fff;
+    transition: transform 1s linear;
+    transform: translate(0,0px) rotate(0deg);
+}
+.muen .muen-bott{
+    width: 100%;
+    height:2px;
+    margin-top: 10px;
+    background: #fff;
+    transition: transform 1s linear;
+    transform: translate(0,0) rotate(0deg);
+}
+
+.sence{
+    width:100%;
+    height:140px;
+    perspective:300px;
+}
+.muen-zi{
+    width: 100%;
+    height:20px;
+    margin-top: 60px;
+    transform-style: preserve-3d;
+}
+.muen-zi a{
+    display: block;
+    width:100%;
+    height:30px;
+    text-align: center;
+    line-height: 30px;
+    background: #0A6AA7;
+    transform-origin: top;
+    opacity: 0;
+    transition: transform .5s;transform: rotateX(90deg);
+    /*animation: muen 1.5s  linear forwards 0s;*/
+}
+/*.muen-zi a:nth-of-type(1){*/
+    /*animation: muen 1.5s forwards 0s;*/
+/*}*/
+@keyframes muen {
+    0%{
+        transform: rotateX(90deg) ;
+        opacity: 0;
+    }
+    100%{
+        transform: rotateX(0deg);
+        opacity: 1;
+    }
+}
+@keyframes muen1 {
+    0%{
+        transform: rotateX(0deg) ;
+        opacity: 1;
+    }
+    100%{
+        transform: rotateX(90deg);
+        opacity: 0;
+    }
+}
+.bai{
+    float: left;
+    height:60px;
 }
 
 
@@ -63,6 +142,7 @@ a{
     /*height:621px;*/
     height:100%;
     position: relative;
+
 }
 .fullpage>div:nth-child(1){
     background:#2E92E0  url(../img/bg0.jpg);
@@ -85,7 +165,7 @@ a{
     position: absolute;
     right:0;
     top:20px;
-    animation: fil 2s linear infinite;
+    animation: fil 2s linear infinite alternate;
 }
 @keyframes fil {
     0%{
@@ -101,16 +181,26 @@ a{
     padding: 20px;
     background:#4EBFFC;
     border-radius: 10px;
-    position: absolute;
-    right:250px;top: 50px;
+
 }
 .fom>div{
-    padding-top: 10px;
     padding-left: 10px;
     width: 299px;
     height:40px;
     margin-bottom: 10px;
     background: #fff;
+}
+.fom .icon1{
+    margin: 13px 10px 0 5px;
+    width:16px;
+    height:15px;
+    float: left;
+}
+.fom .one{
+    background: url(../img/icons.png)no-repeat -124px -12px;
+}
+.fom .one2{
+    background: url(../img/icons.png)no-repeat -140px -12px;
 }
 .fom>div:nth-of-type(3){
     width: 140px;
@@ -125,6 +215,8 @@ a{
     background: none;
     border: 0;
     color: #A1A6B7;
+
+    height:100%;
 }
 .fom a{
     float: left;
@@ -165,7 +257,7 @@ a{
 .bottom{
     width: 100%;
     height:196px;
-    background: rgba(11,103,190,0.5);
+    background: url(../img/bg1.jpg);
     position: absolute;
     bottom:0px;
 }
@@ -196,8 +288,18 @@ a{
     width:242px;
     height:228px;
     background: url(../img/ship.png);
-    margin-left: 130px;
-    margin-top: 53px;
+    position: absolute;
+    top:-190px;
+    left:25%;
+    animation: ship 1s linear forwards;
+}
+@keyframes ship {
+    0%{
+        transform: translate(-10px,0);
+    }
+    100%{
+        transform: translate(10px,0);
+    }
 }
 .arr{
     width:30px;
@@ -206,7 +308,7 @@ a{
     top: 0;bottom:0;left: 0;
     right:0;margin: auto;
     background: url(../img/arr.png);
-    animation: arr 1.5s linear infinite;
+    animation: arr 1.5s linear alternate infinite;
 }
 @keyframes arr {
     0%{
@@ -224,7 +326,7 @@ a{
     position: absolute;
     top:0;
     left:0;
-    background: url(../img/clo1.png) repeat-x;
+    background: url(../img/cloud1.png) repeat-x;
     animation: clo 30s linear infinite;
 }
 .clo2{
@@ -263,6 +365,7 @@ a{
     float: left;
     padding-top: 150px;
 }
+
 .ling{
     width:66px;
     height:156px;
@@ -371,13 +474,6 @@ a{
     position: absolute;
     top:40px;left: 88px;
 }
-/*.all_2{*/
-/*width:88px;*/
-/*height:88px;*/
-/*background: #29A2B8;*/
-/*position: absolute;*/
-/*top:128px;left: 0;*/
-/*}*/
 /*第四屏*/
 .fullpage>div:nth-child(4){
     background: url(../img/bg3.jpg);
@@ -416,4 +512,79 @@ a{
 }
 .active{
     background: #316489;
+}
+
+
+.left{
+    transition: transform 1s linear,opacity 2s linear;
+    transform: translate(-50px,0);
+    opacity: 0;
+}
+.right{
+    transition: transform 1s linear,opacity 2s linear;
+    transform: translate(50px,0);
+    opacity: 0;
+}
+.lau{
+    transform: translate(0px,0);
+    opacity: 1;
+    transition: none;
+}
+
+.fom{
+    transition: none;
+    transform: translate(0px,0);
+    opacity: 1;
+}
+@media screen and (max-width: 1000px){
+    .fom{
+        position: absolute;
+        top:0;bottom: 0;left: 0;right: 0;
+        margin: auto;z-index: 33;
+    }
+    .qm{
+        position: absolute;
+        top:0;bottom: 0;left: 0;right: 0;
+        margin: auto;
+    }
+    .lix{
+        padding-top: 0;
+    }
+    .yuq{
+        padding-top: 350px;
+    }
+}
+@media screen and (min-width: 1000px){
+    .max{
+        display: flex;
+    }
+    .min{
+        display: none;
+    }
+    .box .fist:nth-of-type(2){
+        margin-left: 50px;
+    }
+    .box a:nth-of-type(5){
+        margin-left: 50px;
+    }
+    .box .fist{
+        margin-top: 5px;
+    }
+    .box .last{
+        font-size: 12px;
+        margin-top: 10px;
+    }
+    .box a{
+        width:320px;
+        height:100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .fom{
+        position: absolute;
+        right:250px;top: 50px;
+        z-index: 33;
+    }
+
 }
