@@ -48,6 +48,8 @@ console.log(flage)
         $(".lunbo div").removeClass("active").eq(num).addClass("active");
         $(".fullpage").css({"marginTop":-num*heights})
     })
+    
+    // 滚轮事件
     $(".fullpage").mousewheel(function(){
         
     })
