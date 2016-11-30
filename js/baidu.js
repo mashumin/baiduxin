@@ -53,7 +53,6 @@ $(function(){
                 return
             }
             if(num!==0){
-                console.log(index)
             if(index==num){
                 $(".left").eq(index).css({
                     transform:"translate(0px,0)",
@@ -145,10 +144,12 @@ $(function(){
                     opacity:"1",
                     transform:"rotateX(0deg)",
                     animation:" muen1 .5s  linear forwards "+(1.2-index*0.2)+"s",
-                    display:"none"
                 })
             })
             flage2=true;
+            setTimeout(function(){
+                $(".muen-zi").css("display","none");
+            },12000)
         }
 
     })

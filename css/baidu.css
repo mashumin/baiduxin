@@ -472,8 +472,36 @@ a{
     height:88px;
     background: #33BB9A;
     position: absolute;
-    top:40px;left: 88px;
+    top:0px;left: 88px;
 }
+.all_2{
+    width:88px;
+    height:88px;
+    background: #29A2B8;
+    position: absolute;
+    top:88px;left: 0px;
+}
+.all_3{
+       width:88px;
+       height:88px;
+       background: #60CF6E;
+       position: absolute;
+       top:88px;left: 176px;
+}
+.all_4{
+    width:175px;
+    height:175px;
+    background: url(../img/squ.jpg);
+    position: absolute;
+    top:176px;left: 88px;
+}
+   .all_5{
+       width:88px;
+       height:88px;
+       background: #33BB9A;
+       position: absolute;
+       top:176px;left: 264px;
+   }
 /*第四屏*/
 .fullpage>div:nth-child(4){
     background: url(../img/bg3.jpg);
