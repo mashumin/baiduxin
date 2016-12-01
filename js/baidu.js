@@ -21,7 +21,6 @@ $(function(){
         flage=false;
         $(".fullpage").css({"marginTop":-num*heights});
         $(".lunbo div").removeClass("active").eq(num).addClass("active");
-
     })
     touch.on("body","swipedown",".fullpage",function(){
         if(!flage){
@@ -35,7 +34,6 @@ $(function(){
         flage=false;
         $(".fullpage").css({"marginTop":-num*heights});
         $(".lunbo div").removeClass("active").eq(num).addClass("active");
-
     })
     // 监听事件
     $(".fullpage")[0].addEventListener("webkitTransitionEnd",function(){
@@ -85,7 +83,7 @@ $(function(){
     })
 
     $(".xia").click(function(){
-        num=$(this).index()+1;
+        num=$(this).index(".xia")+1;
         
         $(".lunbo div").removeClass("active").eq(num).addClass("active");
         $(".fullpage").css({"marginTop":-num*heights})
